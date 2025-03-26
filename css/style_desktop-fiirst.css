@@ -1,0 +1,315 @@
+/* Reset de margens e espaçamentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Links */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  opacity: 0.9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: rgba(0, 47, 108);
+  color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background 0.3s ease-in-out, padding 0.3s;
+  z-index: 1000;
+  height: 70px;
+}
+
+/* Alinhando melhor os links e o botão */
+.navbar .nav-container {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Espaçamento entre os links e o botão */
+}
+
+/* Ajusta os links para ficarem mais próximos do botão */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+/* Navbar rolagem */
+.navbar.scrolled {
+  background: rgba(0, 47, 108, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 58px;
+  display: block;
+}
+
+/* Links de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  position: relative;
+}
+
+/* Efeito sublinhado nos links */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background-color: #f5f5f5;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Botão principal e botão da navbar */
+.cta,
+.btn-primary {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  cursor: pointer;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: 0.4s ease-in-out;
+}
+
+.cta {
+  height: 45px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* Efeito de animação ao passar o mouse */
+.cta:hover,
+.btn-primary:hover {
+  background-position: 100% 0px;
+}
+
+/* Efeito gradiente animado */
+.cta,
+.btn-primary {
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 132, 0),
+    rgb(255, 191, 0),
+    rgb(255, 174, 0),
+    rgb(251, 176, 59)
+  );
+  box-shadow: 0px 4px 15px rgba(204, 153, 0, 0.5);
+}
+
+/* Estilos do menu mobile */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 3px;
+  background: #f5f5f5;
+  margin: 6px;
+  transition: 0.3s;
+}
+
+/* Ajuste da navbar para dispositivos menores */
+@media (max-width: 960px) {
+  .nav-container {
+    display: none; /* Esconde os links e o botão da navbar */
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 40vw;
+    height: 100vh;
+    background: rgba(0, 47, 108, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Animação do ícone do menu quando está aberto */
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10% 50px;
+}
+
+/* Texto Hero */
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  color: #d4af37;
+  text-transform: capitalize;
+}
+
+/* Botões */
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #002855;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #eafff9;
+  color: #002855;
+  margin-left: 10px;
+}
+
+/* Imagem */
+.hero-image img {
+  width: 45vh;
+  height: 45vh;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.body-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Círculo sólido atrás da imagem */
+.body-image-container::after {
+  content: ""; /* Elemento virtual */
+  position: absolute;
+  width: 98%; /* Mesmo tamanho da imagem */
+  height: 98%;
+  background: #003466; /* Cor sólida (amarelo ouro, pode trocar) */
+  border-radius: 50%;
+  top: 0; /* Alinhado exatamente com a imagem */
+  left: 0; /* Alinhado exatamente com a imagem */
+  z-index: -2; /* Coloca atrás da imagem e da borda */
+}
+
+/* Círculo de borda */
+.body-image-container::before {
+  content: "";
+  position: absolute;
+  width: 100%; /* Levemente maior que a imagem */
+  height: 100%;
+  border: 1px solid #003466; /* Cor da borda */
+  border-radius: 50%;
+  top: -20px; /* Ajuste fino */
+  left: -20px; /* Ajuste fino */
+  z-index: -99; /* Fica entre o sólido e a imagem */
+}
+
+/* Imagem */
+.body-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estatísticas */
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat {
+  background: #002855;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+}
