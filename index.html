@@ -1,361 +1,341 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatly English School</title>
-
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- CSS do Header -->
-    <link rel="stylesheet" href="css/header.css" />
-
-    <!-- CSS do Footer -->
-    <link rel="stylesheet" href="css/footer.css" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/Logo-offwhite.png" alt="Logo Chatly Off white" />
-          </a>
-        </div>
-        <div class="nav-container">
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <button class="cta">Comece Já</button>
-        </div>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="container">
-      <main>
-        <section class="hero">
-          <div class="hero-text">
-            <h1>Aprenda a Falar Inglês de Verdade</h1>
-            <p>
-              Na Chatly você aprende a conversar em Inglês na prática.
-              Preparamos você para o mundo real.
-            </p>
-            <div class="cta-buttons">
-              <button class="btn-primary">Comece Já</button>
-              <button class="btn-secondary">Como Funciona?</button>
-            </div>
-          </div>
-          <div class="hero-image">
-            <div class="body-image-container">
-              <img src="img/Quadrada-sem-fundo.png" alt="Imagem de aluna" />
-            </div>
-            <div class="stats">
-              <div class="stat"><strong>2K+</strong> Video Courses</div>
-              <div class="stat"><strong>5K+</strong> Online Courses</div>
-              <div class="stat"><strong>250+</strong> Tutors</div>
-            </div>
-          </div>
-        </section>
-        <section class="depoimentos">
-          <div class="container">
-            <h2>O que nossos alunos dizem</h2>
-            <p class="subtitulo">
-              Milhares de alunos já transformaram suas vidas com a Chatly. Veja
-              o que eles têm a dizer:
-            </p>
-
-            <div class="swiper depoimentos-slider">
-              <div class="swiper-wrapper">
-                <!-- Depoimento 1 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno1.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Ana Costa</h3>
-                        <p>Gerente de Projetos</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "Graças à Chatly, consegui minha promoção para um cargo
-                      internacional. O método é realmente eficaz!"
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-
-                <!-- Depoimento 2 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno2.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Lucas Martins</h3>
-                        <p>Engenheiro de Software</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "Depois de 3 meses de curso, passei em uma entrevista para
-                      uma vaga no exterior!"
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-
-                <!-- Depoimento 3 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno3.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Mariana Lopes</h3>
-                        <p>Estudante de Mestrado</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "O curso me deu a confiança que eu precisava para
-                      apresentar meu projeto em uma conferência internacional."
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-
-                <!-- Depoimento 4 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno4.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Pedro Almeida</h3>
-                        <p>Advogado Internacional</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "A Chatly me ajudou a ter confiança para negociar
-                      contratos internacionais em inglês!"
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-
-                <!-- Depoimento 5 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno5.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Fernanda Oliveira</h3>
-                        <p>Empresária</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "Agora consigo participar de conferências internacionais
-                      sem medo!"
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-
-                <!-- Depoimento 6 -->
-                <div class="swiper-slide">
-                  <div class="depoimento-card">
-                    <div class="depoimento-topo">
-                      <img src="img/aluno6.jpg" alt="Foto do aluno" />
-                      <div>
-                        <h3>Ricardo Santos</h3>
-                        <p>Estudante de Intercâmbio</p>
-                      </div>
-                    </div>
-                    <blockquote>
-                      "Graças ao curso, fui aceito no meu intercâmbio dos sonhos
-                      nos EUA!"
-                    </blockquote>
-                    <div class="avaliacao">★★★★★</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Botões de navegação -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- Paginação -->
-              <div class="swiper-pagination"></div>
-            </div>
-
-            <a href="#" class="btn-matricula">Quero aprender inglês agora</a>
-          </div>
-        </section>
-        <!-- Seção Planos -->
-        <section class="plans">
-          <div class="container">
-            <h2>Nossos Planos</h2>
-            <div class="plan-cards">
-              <!-- Plano Semestral -->
-              <div class="plan-card">
-                <h3>Grupo Semestral</h3>
-                <p class="price">R$197 <span>/mês</span></p>
-                <p class="plan-description">
-                  Ideal para quem quer começar a aprender inglês em um ambiente
-                  colaborativo.
-                </p>
-                <ul class="plan-features">
-                  <li>✅ Aulas em grupo (até 6 alunos)</li>
-                  <li>✅ 2 aulas por semana (1h30)</li>
-                  <li>✅ Material didático digital</li>
-                  <li>✅ Certificado de conclusão</li>
-                  <li>✅ Suporte via chat</li>
-                  <li class="disabled">❌ Aulas de conversação extras</li>
-                  <li class="disabled">❌ Mentoria individual</li>
-                </ul>
-                <button class="btn-choose">Começar agora</button>
-              </div>
-
-              <!-- Plano Anual (Mais Popular) -->
-              <div class="plan-card popular">
-                <span class="badge">Popular</span>
-                <h3>Grupo Anual</h3>
-                <p class="price">R$147 <span>/mês</span></p>
-                <p class="plan-description">
-                  Nosso plano mais popular, com desconto para compromisso anual.
-                </p>
-                <ul class="plan-features">
-                  <li>✅ Aulas em grupo (até 6 alunos)</li>
-                  <li>✅ 2 aulas por semana (1h30)</li>
-                  <li>✅ Material didático digital</li>
-                  <li>✅ Certificado de conclusão</li>
-                  <li>✅ Suporte via chat</li>
-                  <li>✅ Aulas de conversação extras</li>
-                  <li class="disabled">❌ Mentoria individual (1x/mês)</li>
-                </ul>
-                <button class="btn-choose popular-btn">
-                  Escolher este plano
-                </button>
-              </div>
-
-              <!-- Plano Individual -->
-              <div class="plan-card">
-                <h3>Individual</h3>
-                <p class="price">R$397 <span>/mês</span></p>
-                <p class="plan-description">
-                  Atenção exclusiva e personalizada para um aprendizado
-                  acelerado.
-                </p>
-                <ul class="plan-features">
-                  <li>✅ Aulas individuais personalizadas</li>
-                  <li>✅ 2 aulas por semana (1h)</li>
-                  <li>✅ Material didático digital</li>
-                  <li>✅ Certificado de conclusão</li>
-                  <li>✅ Suporte via chat prioritário</li>
-                  <li>✅ Aulas de conversação extras</li>
-                  <li>✅ Mentoria individual semanal</li>
-                </ul>
-                <button class="btn-choose">Começar agora</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-logo">
-          <a href="index.html">
-            <img src="img/Logo-offwhite.png" alt="Chatly English School" />
-          </a>
-        </div>
-        <div class="footer-links">
-          <h3>Navegação</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contato</h3>
-          <p>Email: contato@chatly.com</p>
-          <p>Telefone: (11) 99999-9999</p>
-          <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
-        </div>
-        <div class="footer-social">
-          <h3>Siga-nos</h3>
-          <div class="social-icons">
-            <a href="#"><img src="img/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="img/instagram.svg" alt="Instagram" /></a>
-            <a href="#"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Chatly - Todos os direitos reservados.</p>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | SoulTravel</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img
+              src="assets/logo-azul.png"
+              alt="SoulTravel Logo"
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn sign__up">Saiba mais</button>
+        <button class="btn sign__in">Comece já</button>
+      </div>
+    </nav>
+    <header class="header__container">
+      <div class="header__image">
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-key-line"></i></span>
+          Hotel Booking
+        </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-map-2-line"></i></span>
+          Local Events
+        </div>
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-guide-line"></i></span>
+          Tour Guide
+        </div>
+        <img src="assets/header.png" alt="header" />
+      </div>
+      <div class="header__content">
+        <h1>LET'S GO!<br />THE <span>ADVENTURE</span> IS WAITING FOR YOU</h1>
+        <p>
+          A Chatly é a sua parceira no aprendizado de inglês, conectando você a
+          novas oportunidades e experiências globais. Descubra como podemos
+          transformar sua jornada de aprendizado em algo único e inesquecível.
+        </p>
+        <form action="/">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </header>
 
-    <script>
-      var swiper = new Swiper(".depoimentos-slider", {
-        loop: true, // Loop infinito
-        autoplay: {
-          delay: 5000, // Troca automática a cada 5 segundos
-          disableOnInteraction: false,
-        },
-        slidesPerView: 3, // Exibir 3 depoimentos por vez
-        spaceBetween: 30, // Espaço entre os cards
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1, // Em telas pequenas, mostrar 1 por vez
-          },
-          768: {
-            slidesPerView: 2, // Em tablets, mostrar 2 por vez
-          },
-          1024: {
-            slidesPerView: 3, // Em telas grandes, mostrar 3 por vez
-          },
-        },
-      });
-    </script>
+    <section class="about-us">
+      <div class="about-us__container">
+        <div class="about-us__content">
+          <div class="about-us__text">
+            <h2>Nossa Missão</h2>
+            <p>
+              Na Chatly, acreditamos que aprender inglês é mais do que apenas
+              estudar um idioma – é sobre abrir portas para novas oportunidades,
+              conectar-se com pessoas ao redor do mundo e alcançar seus sonhos.
+              Nossa missão é transformar o aprendizado em uma experiência
+              envolvente e eficaz, oferecendo aulas personalizadas e suporte
+              dedicado para nossos alunos.
+            </p>
+            <p>
+              Com anos de experiência no setor de turismo, nossa equipe está
+              comprometida em ajudar você a planejar a viagem dos seus sonhos,
+              seja para relaxar, explorar ou se aventurar.
+            </p>
+          </div>
+          <div class="about-us__image">
+            <img src="assets/header4.png" alt="Sobre Nós" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Nossos Planos -->
+    <section class="plans">
+      <div class="container">
+        <h2>Nossos Planos</h2>
+        <div class="plan-cards">
+          <!-- Plano Semestral -->
+          <div class="plan-card">
+            <h3>Grupo Semestral</h3>
+            <p class="price">R$197 <span>/mês</span></p>
+            <p class="plan-description">
+              Ideal para quem quer começar a aprender inglês em um ambiente
+              colaborativo.
+            </p>
+            <ul class="plan-features">
+              <li>✅ Aulas em grupo (até 6 alunos)</li>
+              <li>✅ 2 aulas por semana (1h30)</li>
+              <li>✅ Material didático digital</li>
+              <li>✅ Certificado de conclusão</li>
+              <li>✅ Suporte via chat</li>
+              <li class="disabled">❌ Aulas de conversação extras</li>
+              <li class="disabled">❌ Mentoria individual</li>
+            </ul>
+            <button class="btn-choose">Começar agora</button>
+          </div>
+
+          <!-- Plano Anual (Mais Popular) -->
+          <div class="plan-card popular">
+            <span class="badge">Popular</span>
+            <h3>Grupo Anual</h3>
+            <p class="price">R$147 <span>/mês</span></p>
+            <p class="plan-description">
+              Nosso plano mais popular, com desconto para compromisso anual.
+            </p>
+            <ul class="plan-features">
+              <li>✅ Aulas em grupo (até 6 alunos)</li>
+              <li>✅ 2 aulas por semana (1h30)</li>
+              <li>✅ Material didático digital</li>
+              <li>✅ Certificado de conclusão</li>
+              <li>✅ Suporte via chat</li>
+              <li>✅ Aulas de conversação extras</li>
+              <li class="disabled">❌ Mentoria individual (1x/mês)</li>
+            </ul>
+            <button class="btn-choose popular-btn">Escolher este plano</button>
+          </div>
+
+          <!-- Plano Individual -->
+          <div class="plan-card">
+            <h3>Individual</h3>
+            <p class="price">R$397 <span>/mês</span></p>
+            <p class="plan-description">
+              Atenção exclusiva e personalizada para um aprendizado acelerado.
+            </p>
+            <ul class="plan-features">
+              <li>✅ Aulas individuais personalizadas</li>
+              <li>✅ 2 aulas por semana (1h)</li>
+              <li>✅ Material didático digital</li>
+              <li>✅ Certificado de conclusão</li>
+              <li>✅ Suporte via chat prioritário</li>
+              <li>✅ Aulas de conversação extras</li>
+              <li>✅ Mentoria individual semanal</li>
+            </ul>
+            <button class="btn-choose">Começar agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-depoimentos">
+      <div class="container">
+        <h2>Opinião dos Nossos Alunos</h2>
+        <p class="new-depoimentos-subtitle">
+          Estamos sempre dispostos a melhorar com o seu feedback.
+        </p>
+        <div class="swiper new-depoimentos-slider">
+          <div class="swiper-wrapper">
+            <!-- Depoimento 1 -->
+            <div class="swiper-slide">
+              <div class="new-depoimento-card">
+                <img
+                  src="assets/header.png"
+                  alt="Theresa Webb"
+                  class="new-depoimento-image"
+                />
+                <div class="new-depoimento-details">
+                  <span class="new-depoimento-name">Theresa Webb</span>
+                  <span class="new-depoimento-title">
+                    Application Support Analyst Lead
+                  </span>
+                  <span class="new-depoimento-description">
+                    A experiência é envolvente e prática. Perfeito para qualquer
+                    nível!
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Depoimento 2 -->
+            <div class="swiper-slide">
+              <div class="new-depoimento-card">
+                <img
+                  src="assets/header2.png"
+                  alt="Courtney Henry"
+                  class="new-depoimento-image"
+                />
+                <div class="new-depoimento-details">
+                  <span class="new-depoimento-name">Courtney Henry</span>
+                  <span class="new-depoimento-title">
+                    Director, Undergraduate Analytics and Planning
+                  </span>
+                  <span class="new-depoimento-description">
+                    Aulas dinâmicas e fáceis de acompanhar! Aprendizado rápido
+                    com Chatly.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Depoimento 3 -->
+            <div class="swiper-slide">
+              <div class="new-depoimento-card">
+                <img
+                  src="assets/header3.png"
+                  alt="Albert Flores"
+                  class="new-depoimento-image"
+                />
+                <div class="new-depoimento-details">
+                  <span class="new-depoimento-name">Albert Flores</span>
+                  <span class="new-depoimento-title">Career Educator</span>
+                  <span class="new-depoimento-description">
+                    Adorei! Professores incríveis e métodos super eficazes.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Depoimento 4 -->
+            <div class="swiper-slide">
+              <div class="new-depoimento-card">
+                <img
+                  src="assets/header4.png"
+                  alt="Leslie Alexander"
+                  class="new-depoimento-image"
+                />
+                <div class="new-depoimento-details">
+                  <span class="new-depoimento-name">Leslie Alexander</span>
+                  <span class="new-depoimento-title">Language Enthusiast</span>
+                  <span class="new-depoimento-description">
+                    A Chatly me ajudou a alcançar fluência em inglês de forma
+                    prática e divertida. Recomendo para todos!
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões de navegação -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a
+      href="https://wa.me/5511950453090"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Entre em contato pelo WhatsApp"
+    >
+      <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://wa.me/5511950453090"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <i class="ri-whatsapp-line"></i>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.instagram.com/chatlyschool"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="ri-instagram-line"></i>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.tiktok.com"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <i class="ri-tiktok-line"></i>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.youtube.com"
+            target="_blank"
+            aria-label="YouTube"
+          >
+            <i class="ri-youtube-line"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      </ul>
+      <p>&copy;2023 SoulTravel | All Rights Reserved</p>
+    </footer>
   </body>
 </html>
