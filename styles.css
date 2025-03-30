@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #003366;
-  --primary-color-dark: #014b94;
+  --primary-color-dark: #5a9bd4;
   --text-dark: #333333;
   --text-light: #767268;
-  --white: #f7fdfb;
+  --white: #f5f5f5;
+  --golden: #d4af37;
   --max-width: 1200px;
   --header-font: "Bebas Neue", sans-serif;
 }
@@ -31,10 +36,38 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
+  top: 0;
   isolation: isolate;
   width: 100%;
-  z-index: 9;
+  z-index: 1000;
+  background: var(--primary-color);
+  display: flex;
+  transition: background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+nav.nav-scrolled {
+  background-color: rgba(
+    0,
+    51,
+    102,
+    0.85
+  ); /* Cor primária com 85% de opacidade */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil opcional */
+}
+
+.nav-itens {
+  padding-block: 0rem;
+  padding-inline: 1rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
 }
 
 .nav__header {
@@ -42,17 +75,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
   flex: 1;
   padding: 0;
   background-color: transparent;
-}
-
-.nav__logo a {
-  font-size: 1.75rem;
-  font-weight: 400;
-  font-family: var(--header-font);
-  color: var(--white);
 }
 
 .nav__menu__btn {
@@ -89,7 +114,7 @@ nav {
 }
 
 .nav__links a:hover {
-  color: var(--text-dark);
+  color: var(--golden);
 }
 
 .nav__btns {
@@ -125,7 +150,7 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -158,7 +183,7 @@ nav {
 
 .header__image__card-1 {
   top: 25%;
-  left: 0;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 
@@ -169,8 +194,8 @@ nav {
 }
 
 .header__image__card-3 {
-  top: 60%;
-  left: 0;
+  top: 50%;
+  left: -2%;
   transform: translateY(-50%);
 }
 
@@ -191,7 +216,7 @@ nav {
 }
 
 .header__content h1 span {
-  color: var(--primary-color);
+  color: var(--golden);
 }
 
 .header__content p {
@@ -199,20 +224,6 @@ nav {
   columns: var(--text-light);
   line-height: 1.75rem;
   text-align: center;
-}
-
-.header__content form {
-  background-color: whitesmoke;
-  margin-bottom: 4rem;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
-  flex-direction: column;
-  gap: 1rem 0;
-  border-radius: calc(1rem + 10px);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header__content .input__row {
@@ -285,11 +296,8 @@ nav {
 
 @media (width > 768px) {
   nav {
-    position: static;
-    padding-block: 2rem 0;
+    padding-block: 1.5rem;
     padding-inline: 1rem;
-    max-width: var(--max-width);
-    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -318,12 +326,12 @@ nav {
 
   .nav__links a {
     padding-block: 5px;
-    color: var(--text-dark);
+    color: var(--white);
     border-bottom: 4px solid transparent;
   }
 
   .nav__links a:hover {
-    border-color: var(--primary-color);
+    border-color: var(--golden);
   }
 
   .nav__btns {
@@ -342,18 +350,9 @@ nav {
     cursor: pointer;
   }
 
-  .sign__up {
-    color: var(--text-dark);
-    background-color: transparent;
-  }
-
-  .sign__up:hover {
-    color: var(--primary-color);
-  }
-
   .sign__in {
-    color: var(--white);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--golden);
   }
 
   .sign__in:hover {
@@ -416,6 +415,9 @@ nav {
   transition: transform 0.3s, box-shadow 0.3s;
   border: 1px solid var(--text-light);
   text-align: left;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  justify-content: space-between; /* Garante que o botão fique na parte inferior */
 }
 
 .plan-card:hover {
@@ -448,8 +450,17 @@ nav {
   margin-bottom: 10px;
 }
 
+.original-price {
+  font-size: 1em;
+  text-decoration: line-through;
+  color: var(--text-light);
+  margin-bottom: -5px;
+  display: block;
+  font-weight: 400;
+}
+
 .price {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 5px;
@@ -850,7 +861,9 @@ nav {
 /* Alterar o logo para Logo-offwhite.png em telas menores */
 @media (max-width: 768px) {
   .nav__header {
-    background-color: var(--primary-color); /* Certifique-se de que o menu está azul */
+    background-color: var(
+      --primary-color
+    ); /* Certifique-se de que o menu está azul */
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -858,5 +871,34 @@ nav {
 
   .nav__logo img {
     content: url("assets/Logo-offwhite.png"); /* Substitui o logo pelo offwhite */
+  }
+
+  .header__image__card {
+    font-size: 0.8rem; /* Reduz o tamanho do texto */
+    padding: 0.3rem 0.55rem; /* Reduz o espaçamento interno */
+    gap: 5px; /* Reduz o espaçamento entre o ícone e o texto */
+  }
+
+  .header__image__card span {
+    font-size: 1.2rem; /* Reduz o tamanho do ícone */
+  }
+
+  /* Reposiciona os elementos para ficarem em volta da imagem circular */
+  .header__image__card-1 {
+    top: 20%; /* Ajusta a posição vertical */
+    left: 85%; /* Ajusta a posição horizontal */
+    transform: translate(-50%, -50%);
+  }
+
+  .header__image__card-3 {
+    top: 50%; /* Ajusta a posição vertical */
+    left: 11%; /* Ajusta a posição horizontal */
+    transform: translate(-30%, -50%);
+  }
+
+  .header__image__card-4 {
+    top: 70%; /* Ajusta a posição vertical */
+    right: 10%; /* Ajusta a posição horizontal */
+    transform: translate(20%, -50%);
   }
 }

@@ -17,7 +17,7 @@ navLinks.addEventListener("click", (e) => {
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
-  duration: 1000,
+  duration: 300,
 };
 
 ScrollReveal().reveal(".header__image img", {
@@ -27,17 +27,17 @@ ScrollReveal().reveal(".header__image img", {
 
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
-  delay: 500,
+  delay: 300,
 });
 
 ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 
 ScrollReveal().reveal(".header__content form", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 700,
 });
 
 ScrollReveal().reveal(".header__content .bar", {
@@ -47,22 +47,22 @@ ScrollReveal().reveal(".header__content .bar", {
 
 ScrollReveal().reveal(".header__image__card", {
   duration: 1000,
-  interval: 500,
-  delay: 2500,
+  interval: 600,
+  delay: 800,
 });
 
 // ScrollReveal configuration for "Nossos Planos"
 ScrollReveal().reveal('#plans-section', {
   origin: 'bottom',
   distance: '50px',
-  duration: 1000,
+  duration: 4000,
   delay: 200,
   reset: false, // Set to true if you want the animation to repeat on scroll
 });
 
 // Alternância de imagens no header
 const headerImage = document.querySelector(".header__image img");
-const images = ["assets/header.png", "assets/header2.png", "assets/header3.png"];
+const images = ["assets/header.png", "assets/header2.png", "assets/header3.png", "assets/header4.png"];
 let currentImageIndex = 0;
 
 setInterval(() => {
@@ -92,4 +92,14 @@ const depoimentosSwiper = new Swiper('.new-depoimentos-slider', {
       slidesPerView: 3,
     },
   },
+});
+const mainNav = document.querySelector('nav'); // Seleciona o elemento <nav> principal
+
+window.addEventListener('scroll', () => {
+  // Verifica se a página foi rolada mais que 50 pixels (ajuste se necessário)
+  if (window.scrollY > 50) {
+    mainNav.classList.add('nav-scrolled'); // Adiciona a classe se rolou para baixo
+  } else {
+    mainNav.classList.remove('nav-scrolled'); // Remove a classe se está no topo
+  }
 });
