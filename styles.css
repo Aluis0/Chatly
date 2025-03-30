@@ -6,13 +6,14 @@ html {
 
 :root {
   --primary-color: #003366;
-  --primary-color-dark: #5a9bd4;
-  --text-dark: #333333;
+  --primary-color-light: #5a9bd4;
+  --text-light: #333333;
   --text-light: #767268;
   --white: #f5f5f5;
   --golden: #d4af37;
   --max-width: 1200px;
-  --header-font: "Bebas Neue", sans-serif;
+  --header-font: "Anton", sans-serif; /* Nova fonte para o cabeçalho */
+  --body-font: "Poppins", sans-serif; /* Nova fonte para o corpo */
 }
 
 * {
@@ -32,7 +33,7 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--body-font); /* Aplica a fonte Poppins ao corpo */
 }
 
 nav {
@@ -145,12 +146,12 @@ nav.nav-scrolled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("assets/header-bg.png");
+  background-image: url("assets/1.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 100%;
-  opacity: 0.7;
+  opacity: 1;
   z-index: -1;
 }
 
@@ -167,7 +168,7 @@ nav.nav-scrolled {
   gap: 10px;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-light);
   background-color: var(--white);
   white-space: nowrap;
   border-radius: 5px;
@@ -210,7 +211,7 @@ nav.nav-scrolled {
   font-size: 5rem;
   font-weight: 400;
   font-family: var(--header-font);
-  color: var(--text-dark);
+  color: var(--primary-color);
   line-height: 5.5rem;
   text-align: center;
 }
@@ -223,7 +224,7 @@ nav.nav-scrolled {
   margin-bottom: 2rem;
   columns: var(--text-light);
   line-height: 1.75rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .header__content .input__row {
@@ -261,7 +262,7 @@ nav.nav-scrolled {
 
 .header__content input::placeholder {
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .header__content .input__group span {
@@ -285,7 +286,7 @@ nav.nav-scrolled {
 }
 
 .header__content button:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color-light);
 }
 
 .header__content .bar {
@@ -305,7 +306,7 @@ nav.nav-scrolled {
   }
 
   .nav__logo a {
-    color: var(--text-dark);
+    color: var(--text-light);
   }
 
   .nav__logo a span {
@@ -356,7 +357,7 @@ nav.nav-scrolled {
   }
 
   .sign__in:hover {
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-light);
   }
 
   .header__container {
@@ -394,7 +395,7 @@ nav.nav-scrolled {
 
 .plans h2 {
   font-size: 32px;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 30px;
 }
 
@@ -427,7 +428,7 @@ nav.nav-scrolled {
 
 /* Destaque para o plano mais popular */
 .plan-card.popular {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--golden);
   position: relative;
 }
 
@@ -435,7 +436,7 @@ nav.nav-scrolled {
   position: absolute;
   top: -10px;
   right: -10px;
-  background: var(--primary-color);
+  background: var(--golden);
   color: var(--white);
   padding: 5px 10px;
   font-size: 12px;
@@ -446,7 +447,7 @@ nav.nav-scrolled {
 /* Título e Preço */
 .plan-card h3 {
   font-size: 22px;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 10px;
 }
 
@@ -460,7 +461,7 @@ nav.nav-scrolled {
 }
 
 .price {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 5px;
@@ -488,7 +489,7 @@ nav.nav-scrolled {
 .plan-features li {
   font-size: 14px;
   margin-bottom: 8px;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .plan-features .disabled {
@@ -510,12 +511,12 @@ nav.nav-scrolled {
 }
 
 .btn-choose:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color-light);
 }
 
 /* Botão do plano mais popular */
 .popular-btn {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color-light);
 }
 
 .popular-btn:hover {
@@ -617,7 +618,7 @@ nav.nav-scrolled {
 }
 
 .footer .social-icon__link:hover {
-  color: var(--primary-color-dark);
+  color: var(--primary-color-light);
 }
 
 .footer .menu {
@@ -641,7 +642,7 @@ nav.nav-scrolled {
 }
 
 .footer .menu__link:hover {
-  color: var(--primary-color-dark);
+  color: var(--primary-color-light);
 }
 
 .footer p {
@@ -697,7 +698,7 @@ nav.nav-scrolled {
 
 .about-us__text p {
   font-size: 16px;
-  color: var(--text-dark);
+  color: var(--text-light);
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -746,7 +747,7 @@ nav.nav-scrolled {
 
 .new-depoimentos h2 {
   font-size: 2.5em;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 20px;
 }
 
@@ -765,9 +766,9 @@ nav.nav-scrolled {
 }
 
 .new-depoimento-card {
-  background: #f8f9fa;
+  background: none; /* Remove o fundo padrão */
   border-radius: 10px;
-  padding: 20px;
+  padding: 0; /* Remove o preenchimento */
   width: 300px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -777,6 +778,7 @@ nav.nav-scrolled {
   align-items: center;
   justify-content: center;
   height: 400px;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
 }
 
 .new-depoimento-card:hover {
@@ -785,11 +787,11 @@ nav.nav-scrolled {
 }
 
 .new-depoimento-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+  width: 100%; /* Preenche a largura do card */
+  height: 100%; /* Preenche a altura do card */
+  border-radius: 10px; /* Mantém as bordas arredondadas */
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+  margin-bottom: 0; /* Remove a margem inferior */
 }
 
 .new-depoimento-details {
@@ -801,7 +803,7 @@ nav.nav-scrolled {
 .new-depoimento-name {
   font-size: 1.1em;
   font-weight: bold;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 5px;
 }
 
@@ -813,7 +815,7 @@ nav.nav-scrolled {
 
 .new-depoimento-description {
   font-size: 1em;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 15px;
   text-align: center;
   overflow: hidden;
@@ -900,5 +902,44 @@ nav.nav-scrolled {
     top: 70%; /* Ajusta a posição vertical */
     right: 10%; /* Ajusta a posição horizontal */
     transform: translate(20%, -50%);
+  }
+
+  .header__container {
+    grid-template-columns: 1fr; /* Alinha os elementos em uma única coluna */
+    grid-template-rows: auto auto; /* Define a ordem das linhas */
+  }
+
+  .header__content {
+    order: 1; /* Faz o texto aparecer antes da imagem */
+    text-align: center; /* Centraliza o texto no mobile */
+  }
+
+  .header__image {
+    order: 2; /* Faz a imagem aparecer depois do texto */
+    max-width: 80%; /* Reduz o tamanho da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  .header__image img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .header__content h1 {
+    font-size: 3rem; /* Reduz o tamanho do título */
+    line-height: 3.5rem; /* Ajusta o espaçamento entre linhas */
+    margin-bottom: 1rem; /* Reduz o espaçamento inferior */
+  }
+
+  .header__content p {
+    font-size: 1rem; /* Reduz o tamanho do texto do parágrafo */
+    line-height: 1.5rem; /* Ajusta o espaçamento entre linhas */
+    margin-bottom: 1.5rem; /* Reduz o espaçamento inferior */
+    max-width: 90%; /* Limita a largura do texto */
+    margin-inline: auto; /* Centraliza o texto horizontalmente */
+  }
+
+  .header__container {
+    padding-block: 2rem 1rem; /* Reduz o espaçamento superior e inferior */
   }
 }
