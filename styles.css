@@ -531,51 +531,120 @@ nav.nav-scrolled {
   }
 }
 
-/* ======== Botão Flutuante do WhatsApp ======== */
-.whatsapp-float {
+/* --- Floating Action Button (FAB) --- */
+.fab-container {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 25px;
+  /* right: 25px; <= REMOVA esta linha */
+  /* Calcula a posição direita:
+     - Em telas menores que max-width, calc() será <= 0, então max() usará 25px (distância da borda da tela).
+     - Em telas maiores, calc() será > 0, então max() usará a posição calculada
+       (distância da borda do conteúdo + 25px).
+  */
+  right: max(25px, calc((100vw - var(--max-width)) / 2 + 25px));
+  left: auto; /* Garante que 'right' funcione */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fab-main {
   width: 60px;
   height: 60px;
-  background-color: #39da56;
+  background-color: var(--primary-color);
   color: var(--white);
   border-radius: 50%;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: box-shadow 0.3s ease;
-  animation: pulse 2s infinite; /* Adiciona a animação */
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  position: relative;
+  z-index: 1001;
+  order: 2; /* ADICIONE: Faz o botão principal ir para baixo no flex-direction: column */
 }
 
-.whatsapp-float:hover {
+/* ... (estilos :hover e .open para .fab-main permanecem os mesmos) ... */
+.fab-main:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--primary-color-light);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.5);
 }
 
-.whatsapp-float i {
-  font-size: 28px;
+.fab-main i {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05); /* Cresce sutilmente */
-  }
+.fab-container.open .fab-main {
+  background-color: var(--golden);
+  transform: rotate(45deg);
 }
 
-@media (min-width: 1200px) {
-  .whatsapp-float {
-    left: calc(
-      (100% - var(--max-width)) / 2 + 20px
-    ); /* Mantém o botão dentro da área do site */
-  }
+
+.fab-options {
+  display: flex;
+  flex-direction: column; /* Mantém coluna */
+  align-items: center;
+  gap: 15px;
+  /* margin-bottom: 20px; <= REMOVA ESTA LINHA */
+  margin-bottom: 0;     /* ADICIONE: Remove margem inferior */
+  margin-top: 0;        /* Garante sem margem superior */
+  padding-bottom: 20px; /* ADICIONE: Espaço ENTRE as opções e o botão principal */
+  list-style: none;
+  padding-left: 0; /* Garante sem padding esquerdo */
+  opacity: 0;
+  visibility: hidden;
+  /* transform: translateY(15px) scale(0.8); <= MUDE ESTA LINHA */
+  transform: translateY(20px) scale(0.8); /* MUDE PARA translateY positivo (começa mais baixo) */
+  /* transform-origin: bottom center; <= MUDE ESTA LINHA */
+  transform-origin: bottom center; /* Mantém a origem na base */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  order: 1; /* ADICIONE: Faz as opções ficarem acima do botão principal */
 }
+
+.fab-container.open .fab-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1); /* Anima para a posição final (Y=0) */
+}
+
+/* ... (estilos para .fab-option e suas cores permanecem os mesmos) ... */
+.fab-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.fab-option:hover {
+  transform: scale(1.15) rotate(-10deg);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fab-option i {
+  font-size: 1.5rem;
+}
+
+.fab-whatsapp { background-color: #25D366; }
+.fab-whatsapp:hover { background-color: #128C7E; }
+.fab-instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+.fab-instagram:hover { transform: scale(1.15) rotate(10deg); }
+.fab-tiktok { background-color: #000000; }
+.fab-tiktok:hover { background-color: #FE2C55; }
+.fab-facebook { background-color: #1877F2; }
+.fab-facebook:hover { background-color: #115293; }
+
+/* --- Media Queries --- */
 
 /* ======== Footer ======== */
 .footer {

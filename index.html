@@ -118,7 +118,7 @@
         />
       </div>
       <div class="header__content">
-        <h1>FALE INGLÊS<br />DE FORMA <span>CONFIANTE</span> COM A CHATLY </h1>
+        <h1>FALE INGLÊS<br />DE FORMA <span>CONFIANTE</span> COM A CHATLY</h1>
         <p>
           Fuja dos métodos convencionais e aprenda inglês na prática,
            com aulas online focadas na conversação.
@@ -284,15 +284,30 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a
-      href="https://wa.me/5511950453090?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Chatly!"
-      target="_blank"
-      class="whatsapp-float"
-      aria-label="Entre em contato pelo WhatsApp"
-    >
-      <i class="ri-whatsapp-line"></i>
-    </a>
+<!-- Floating Action Button (FAB) -->
+<div class="fab-container">
+  <div class="fab-options">
+      <!-- Opção Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61574709455657" target="_blank" class="fab-option fab-facebook" aria-label="Acesse nosso Facebook">
+          <i class="ri-facebook-fill"></i>
+      </a>
+      <!-- Opção TikTok -->
+      <a href="https://www.tiktok.com/@chatlyschool" target="_blank" class="fab-option fab-tiktok" aria-label="Acesse nosso TikTok">
+          <i class="ri-tiktok-fill"></i>
+      </a>
+      <!-- Opção Instagram -->
+      <a href="https://www.instagram.com/chatlyschool" target="_blank" class="fab-option fab-instagram" aria-label="Acesse nosso Instagram">
+          <i class="ri-instagram-fill"></i>
+      </a>
+      <!-- Opção WhatsApp -->
+      <a href="https://wa.me/5511950453090?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Chatly!" target="_blank" class="fab-option fab-whatsapp" aria-label="Fale conosco pelo WhatsApp">
+          <i class="ri-whatsapp-line"></i>
+      </a>
+  </div>
+  <button class="fab-main" id="fab-main-btn" aria-label="Abrir opções de contato" aria-expanded="false">
+      <i class="ri-whatsapp-line"></i> <!-- Ícone inicial -->
+  </button>
+</div>
 
     <footer id="contato" class="footer">
       <div class="waves">
@@ -348,7 +363,7 @@
           <a class="menu__link" href="#inicio">Início</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#nossa-missao">Nossa missão</a>
+          <a class="menu__link" href="#nossa-missao">Por que a Chatly?</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#planos">Planos</a>
