@@ -831,7 +831,6 @@ nav.nav-scrolled {
   max-width: var(--max-width); /* Limita a largura máxima ao restante do site */
   margin: auto;
   padding: 20px;
-  overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
 }
 
 .new-depoimento-card {
@@ -860,7 +859,7 @@ nav.nav-scrolled {
   height: 100%; /* Preenche a altura do card */
   border-radius: 10px; /* Mantém as bordas arredondadas */
   object-fit: cover; /* Garante que a imagem cubra todo o espaço */
-  margin-bottom: 0; /* Remove a margem inferior */
+  margin: 50px; /* Remove a margem inferior */
 }
 
 .new-depoimento-details {
@@ -925,7 +924,19 @@ nav.nav-scrolled {
   }
 
   .new-depoimento-card {
-    width: 90%;
+    background: none; /* Remove o fundo padrão */
+    border-radius: 10px;
+    padding: 0; /* Remove o preenchimento */
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px; /* Aumente a altura */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
   }
 }
 

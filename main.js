@@ -170,11 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        // Quando a largura da janela for >= 576px
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
         // Quando a largura da janela for >= 768px
         768: {
           slidesPerView: 3, // Mostrar 3 no tablet
@@ -182,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         // Quando a largura da janela for >= 1024px
         1024: {
-          slidesPerView: 4, // Mostrar 4 no desktop
+          slidesPerView: 3, // Mostrar 3 no desktop
           spaceBetween: 30,
         },
       },
@@ -312,4 +307,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Elementos do FAB não encontrados!");
   }
 }); // Fim do DOMContentLoaded
-
