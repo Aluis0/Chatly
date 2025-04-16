@@ -1,8 +1,8 @@
-# Chatly English School - Landing Page
+Chatly English School - Landing Page
 
 Bem-vindo ao repositório da **Landing Page da Chatly English School**! Este projeto foi desenvolvido para promover os cursos de inglês da Chatly, com foco em design responsivo, navegação intuitiva e conversão de novos alunos.
 
-## 📋 Descrição
+Descrição
 
 A landing page apresenta:
 
@@ -11,7 +11,7 @@ A landing page apresenta:
 - **Depoimentos**: Feedback de alunos reais para aumentar a credibilidade.
 - **Botão de WhatsApp**: Facilita o contato direto com a equipe.
 
-## 🚀 Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica do site.
 - **CSS3**: Estilização e design responsivo.
@@ -19,30 +19,17 @@ A landing page apresenta:
 - **Swiper.js**: Slider para a seção de depoimentos.
 - **ScrollReveal.js**: Animações de entrada ao rolar a página.
 
-## 🌟 Funcionalidades
+Funcionalidades
 
 - **Design Responsivo**: Compatível com dispositivos móveis, tablets e desktops.
 - **Botões de Ação**: Links diretos para o WhatsApp com mensagens personalizadas para cada plano.
 - **Animações**: Efeitos suaves para melhorar a experiência do usuário.
 - **Promoções**: Exibição de preços promocionais com valores cortados.
 
-## 🛠️ Como Executar o Projeto
+Como Executar o Projeto
 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/chatly-landing-page.git
    ```
 
-```
-
-## 📂 Estrutura do Projeto
-
----
-
-### **Como Personalizar**
-1. Substitua os links e informações de contato pelos dados reais da Chatly.
-2. Adicione mais detalhes sobre o projeto, se necessário (ex.: objetivos, desafios, etc.).
-3. Inclua instruções específicas para desenvolvedores, caso o projeto precise de configuração adicional.
-
-Se precisar de mais ajuda, é só avisar! 😊
-```
